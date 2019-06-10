@@ -25,6 +25,7 @@ SECRET_KEY = 'zf)1m$g&fkih^r_hu)!tz3w&7klkj(*=6!3=fqes7f^#&7-+j7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -32,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls',
-    'webapp',
+   # 'webapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'django_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
